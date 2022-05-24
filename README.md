@@ -7,6 +7,7 @@ This is a simple template for starting SFML projects.
 **[Compilation](#compilation)**
 * [Adding Files](#adding-files-optional)
 * [SFML Headers](#adding-files-optional)
+* [Changing Folder Names](#changing-folder-names)
 
 **[Game Class](#game-class)**
 * [Class Members](#class-members)
@@ -36,7 +37,7 @@ To run your game, run:
 ```
 
 #### Adding Files (Optional)
-You should add header files in the `inc` directory. Place their corresponding source files in `src`. If you change the names of any directories, make sure you change their corresponding variable in `build.sh`.
+You should add header files in the `inc` directory. Place their corresponding source files in `src`.
 
 When you add a new source file open `build.sh`. Add a new line to the `cpp` string. Here's an example:
 
@@ -52,7 +53,7 @@ cpp="\
      $root/$src/enemy.cc"
 ```
 
-You shouldn't include any header files in the script. For more information, read the comments in the, these outline the steps to compile the project.
+You shouldn't include any header files in the script. For more information, read the comments, these outline the steps to compile the project.
 
 #### SFML Headers (Optional)
 You can remove any SFML headers that you haven't included. For instance, let's remove `SFML/Network.hpp`:
@@ -75,6 +76,21 @@ lib="\
      -lsfml-system \
      -lsfml-window"
  ```
+ 
+#### Changing Folder Names
+If you change the names of any directories, make sure you change their corresponding variable in `build.sh`. For example, let's change `src` to `source` and `inc` to `include`:
+
+Before:
+```bash
+src="src"
+inc="inc"
+```
+
+After:
+```bash
+src="source"
+inc="include"
+```
  
 ## Game Class
 The game class is relatively straightforward to use. It includes update and render methods, and well as a `sf::RenderWindow*` and `sf::VideoMode`. You shouldn't need to edit `main.cc`.
