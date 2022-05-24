@@ -21,6 +21,8 @@ Simply run the following terminal commands:
 git clone https://github.com/matthewflegg/sfml-template.git
 cd sfml-template
 ```
+You can also just create a template from the repository or clone this repo a different way. Regardless of how you do it, everything else will work the same way.
+
 ## Compilation
 Compilation is done via a shell script. Unfortunately, I haven't got round to writing a script for Windows yet. On Linux or macOS, run the following commands:
 ```bash
